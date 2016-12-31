@@ -9,10 +9,9 @@ saveBtn.onclick = function() {
     if (email.value == '') {
 	alert("Поле с email пусто :(");
     } else {
-	var body = 'email=' + email.value ;
-	xhr.open("PUT", 'https://secret-dawn-16503.herokuapp.com/add', true)
-	xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
-	xhr.send(body);
+	var params = 'email=' + encodeURIComponent(email.value)
+	xhr.open("GET", 'https://secret-dawn-16503.herokuapp.com/add?' + params , true)
+	xhr.send();
 	alert("Спасибо! А теперь к столу!")
     }
 }
