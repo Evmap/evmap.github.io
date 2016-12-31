@@ -1,7 +1,3 @@
-if (window.console) {
-    console.log("Welcome to your Play application's JavaScript!");
-}
-
 var email = document.querySelector("#email");
 var saveBtn = document.querySelector("#btn");
 saveBtn.onclick = function() {
